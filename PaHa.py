@@ -15,5 +15,5 @@ adres = ''
 # Czy zamówienie jest juz dostępne?
 matches = re.findall('Zarezerwowany.+\d', login.loginaleph(logon, haslo))
 
-if len(matches) == 0:
+if len(matches) > 0:
     sendemail.send(adres, matches)
