@@ -9,7 +9,7 @@ def send(adres, matches):
            '\nStatus: %s.' \
            '\nWejdź na http://katalog.biblioteka.wroc.pl/F i sprawdź jeśli mi nie ufasz:P' % matches
     sender = 'mty.python@o2.pl'
-    passw = 'Python123'
+    passw = 'xxx'
 
     mail = smtplib.SMTP('poczta.o2.pl', 587)
 
