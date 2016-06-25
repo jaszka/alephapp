@@ -1,0 +1,5 @@
+smtp:
+ host: poczta.o2.pl
+ port: 587
+ sender: mty.python@o2.pl
+ password: Python123
