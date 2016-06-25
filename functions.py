@@ -40,7 +40,6 @@ def loginAleph(logon, haslo):
 def checkAleph(logon, haslo):
     page = loginAleph(logon, haslo)
     notification = re.findall('Zarezerwowany.+\d', page)
-    #notification = 'bla'
     if len(notification)>0:
         return (True, notification)
     else:
@@ -76,11 +75,3 @@ def send(notification, to):
     mail.sendmail(smtp['sender'], [to], body)
     mail.close()
     print 'Poszło'
-
-if __name__ == '__main__':
-    test = checkAleph('200706', '813344')
-    print test
-
-#logon = '200706'
-#haslo = '813344'
-#adres = 'a.jachowicz@o2.pl'
