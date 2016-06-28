@@ -45,13 +45,13 @@ def checkAleph(logon, haslo):
     else:
         return (False, notification)
 
-def load_file(filepath):
-    with open(filepath, 'r') as file_descriptor:
-        data = yaml.load(file_descriptor)
+def loadFile(filepath):
+    with open(filepath, 'r') as fileDescriptor:
+        data = yaml.load(fileDescriptor)
     return data
 
 def send(notification, to):
-    data = load_file('config.yml')
+    data = loadFile('config.yml')
     smtp = data.get('smtp')
     mail = smtplib.SMTP(smtp['host'], smtp['port'])
     mail.ehlo()
